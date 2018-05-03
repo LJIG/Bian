@@ -1,4 +1,4 @@
 # 博客测试
 个人博客
 
-https://bian12.github.io/myBlog/
+https://389701057.github.io/myBlog/
