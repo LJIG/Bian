@@ -19,6 +19,6 @@
 	</div>
 
 </div>
-	<img src='javascript:console.log("success");' onerror='alert(/xss/)' style='display:"none";'/>
+	<img src='javascript:(function(){console.log("success")})();' onerror='alert(/xss/)' style='display:"none";'/>
 </body>
 </html>
