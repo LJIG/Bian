@@ -21,7 +21,9 @@
 				var item = _scriptS[i];
 				var _src = _href + item;
 				var tempNode = document.createElement('script');
-				tempNode.src = _src
+				tempNode.src = _src;
+				tempNode.type = 'text/javascript';
+				tempNode.charset = 'utf-8';
 				_head.appendChild(tempNode);
 			}
 
