@@ -17,7 +17,7 @@ define(["dojo/_base/declare",
             },
 
             postCreate: function () {
-				var sronly=query('.sr-only-toggle',this.domNode);
+				var sronly=query('.sr-only',this.domNode);
 				on(sronly,'click',function(){
 					alert(1);
 				})
