@@ -6,9 +6,7 @@
 	<title>___</title>
 	<link rel="stylesheet" href="style/css.css" />
 	<script>
-		'use strict'
-
-		! function createScript() {
+		(function createScript() {
 			var _scriptS = [
 				'script/dojoInit.js',
 				'script/dojo-release-1.13.0/dojo/dojo.js',
@@ -34,11 +32,8 @@
 				tempNode.src = _src
 				_head.appendChild(tempNode);
 			},1000)
-		}()
+		})()
 	</script>
-	<!-- <script src="./script/dojoInit.js"></script>
-	<script src="./script/dojo-release-1.13.0/dojo/dojo.js"></script>
-	<script src='./script/index.js'></script> -->
 </head>
 
 <body>
