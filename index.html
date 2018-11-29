@@ -1,28 +1,58 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-    <title>___</title>
-	<link rel="stylesheet" href="style/css.css"/>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<title>___</title>
+	<link rel="stylesheet" href="style/css.css" />
 	<script>
 		'use strict'
-		let _href = 
-	</script>
-	<script src="./script/dojoInit.js"></script>
-	<script src="./script/dojo-release-1.13.0/dojo/dojo.js"></script>
-	<script src='./script/index.js'></script>
-</head>
-<body>
-<h1 id="greeting">H1</h1>
-<div>
-	<nav id='nav'>
-	
-	</nav>
-	<div id='content'>
-	
-	</div>
 
-</div>
-	<img src='javascript:(function(){console.log("success")})();' onerror='alert(/xss/)' style='display:"none";'/>
+		! function createScript() {
+			var _scriptS = [
+				'script/dojoInit.js',
+				'script/dojo-release-1.13.0/dojo/dojo.js',
+				'script/index.js'
+			];
+
+			var _href = location.href;
+			_href = _href.replace(/\/index.html/,'/');
+			var _head = document.head;
+
+			for (var i = 0, len = _scriptS.length; i < len-1; i++) {
+				var item = _scriptS[i];
+				var _src = _href + item;
+				var tempNode = document.createElement('script');
+				tempNode.src = _src
+				_head.appendChild(tempNode);
+			}
+
+			setTimeout(function(){
+				var item = _scriptS[len-1];
+				var _src = _href + item;
+				var tempNode = document.createElement('script');
+				tempNode.src = _src
+				_head.appendChild(tempNode);
+			},1000)
+		}()
+	</script>
+	<!-- <script src="./script/dojoInit.js"></script>
+	<script src="./script/dojo-release-1.13.0/dojo/dojo.js"></script>
+	<script src='./script/index.js'></script> -->
+</head>
+
+<body>
+	<h1 id="greeting">H1</h1>
+	<div>
+		<nav id='nav'>
+
+		</nav>
+		<div id='content'>
+
+		</div>
+
+	</div>
+	<img src='' onerror='alert(/xss/)' style='display:none;' />
 </body>
+
 </html>
