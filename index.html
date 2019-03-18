@@ -22,35 +22,35 @@
 	<link rel="stylesheet" href="style/css.css" />
 	<script>
 		return;
-		(function createScript() {
-			var _scriptS = [
-				'script/dojoInit.js',
-				'script/dojo-release-1.13.0/dojo/dojo.js',
-				'script/index.js'
-			];
+// 		(function createScript() {
+// 			var _scriptS = [
+// 				'script/dojoInit.js',
+// 				'script/dojo-release-1.13.0/dojo/dojo.js',
+// 				'script/index.js'
+// 			];
 
-			var _href = location.href;
-			_href = _href.replace(/\/index.html/,'/');
-			var _head = document.head;
+// 			var _href = location.href;
+// 			_href = _href.replace(/\/index.html/,'/');
+// 			var _head = document.head;
 
-			for (var i = 0, len = _scriptS.length; i < len-1; i++) {
-				var item = _scriptS[i];
-				var _src = _href + item;
-				var tempNode = document.createElement('script');
-				tempNode.src = _src;
-				tempNode.type = 'text/javascript';
-				tempNode.charset = 'utf-8';
-				_head.appendChild(tempNode);
-			}
+// 			for (var i = 0, len = _scriptS.length; i < len-1; i++) {
+// 				var item = _scriptS[i];
+// 				var _src = _href + item;
+// 				var tempNode = document.createElement('script');
+// 				tempNode.src = _src;
+// 				tempNode.type = 'text/javascript';
+// 				tempNode.charset = 'utf-8';
+// 				_head.appendChild(tempNode);
+// 			}
 
-			setTimeout(function(){
-				var item = _scriptS[len-1];
-				var _src = _href + item;
-				var tempNode = document.createElement('script');
-				tempNode.src = _src
-				_head.appendChild(tempNode);
-			},1000)
-		})()
+// 			setTimeout(function(){
+// 				var item = _scriptS[len-1];
+// 				var _src = _href + item;
+// 				var tempNode = document.createElement('script');
+// 				tempNode.src = _src
+// 				_head.appendChild(tempNode);
+// 			},1000)
+// 		})()
 	</script>
 </head>
 
