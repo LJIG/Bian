@@ -53,8 +53,8 @@ function drawSecPin() {
     ctxBack.lineTo(3, -175);
     ctxBack.lineTo(13, -165);
     ctxBack.lineTo(0, -210);
-    ctxBack.lineTo( - 13, -165);
-    ctxBack.lineTo( - 3, -175);
+    ctxBack.lineTo(- 13, -165);
+    ctxBack.lineTo(- 3, -175);
     ctxBack.lineTo(0, 30);
     ctxBack.stroke();
     ctxBack.closePath();
@@ -73,8 +73,8 @@ function drawMinPin() {
     ctxBack.lineTo(3, -145);
     ctxBack.lineTo(10, -135);
     ctxBack.lineTo(0, -180);
-    ctxBack.lineTo( - 10, -135);
-    ctxBack.lineTo( - 3, -145);
+    ctxBack.lineTo(- 10, -135);
+    ctxBack.lineTo(- 3, -145);
     ctxBack.lineTo(0, 20);
     ctxBack.stroke();
     ctxBack.closePath();
@@ -93,8 +93,8 @@ function drawHouPin() {
     ctxBack.lineTo(3, -110);
     ctxBack.lineTo(10, -100);
     ctxBack.lineTo(0, -150);
-    ctxBack.lineTo( - 10, -100);
-    ctxBack.lineTo( - 3, -110);
+    ctxBack.lineTo(- 10, -100);
+    ctxBack.lineTo(- 3, -110);
     ctxBack.lineTo(0, 20);
     ctxBack.stroke();
     ctxBack.closePath();
@@ -102,7 +102,7 @@ function drawHouPin() {
 }
 function setPoint() {
     ctxBack.beginPath();
-    ctxBack.fillStyle = 'black';
+    ctxBack.fillStyle = 'transparent';
     ctxBack.arc(250, 250, 3, 0, 2 * Math.PI);
     ctxBack.stroke();
 }
@@ -150,44 +150,47 @@ function showTime() {
     minutes = smoothmin;
     hour = hours;
     switch (day) {
-    case 1:
-        date = '一'
-        break;
-    case 2:
-        date = '二'
-        break;
-    case 3:
-        date = '三'
-        break;
-    case 4:
-        date = '四'
-        break;
-    case 5:
-        date = '五'
-        break;
-    case 6:
-        date = '六'
-        break;
-    case 0:
-        date = '日'
-        break;
+        case 1:
+            date = '一'
+            break;
+        case 2:
+            date = '二'
+            break;
+        case 3:
+            date = '三'
+            break;
+        case 4:
+            date = '四'
+            break;
+        case 5:
+            date = '五'
+            break;
+        case 6:
+            date = '六'
+            break;
+        case 0:
+            date = '日'
+            break;
     }
-    gradient = ctx.createRadialGradient(250, 250, 5, 250, 250, 300);
-    gradient.addColorStop(0, "#03303a");
-    gradient.addColorStop(1, "black");
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    gradient = ctx.createRadialGradient(canvas.width/2, canvas.height/2, 5, 250, 250, 300);
+    // gradient.addColorStop(0, "#03303a");
+    // gradient.addColorStop(1, "black");
+    gradient.addColorStop(0, "transparent");
+    gradient.addColorStop(1, "transparent");
     ctx.fillStyle = gradient;
-    ctx.fillRect(0, 0, 500, 500);
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.beginPath();
     ctx.strokeStyle = '#87CEFA';
-    ctx.arc(250, 250, 215, degToRad(0), degToRad((hours * 30) - 90));
+    ctx.arc(canvas.width/2, canvas.height/2, 215, degToRad(0), degToRad((hours * 30) - 90));
     ctx.stroke();
     ctx.beginPath();
     ctx.strokeStyle = '#20B2AA';
-    ctx.arc(250, 250, 220, degToRad(0), degToRad(smoothmin * 6 - 90));
+    ctx.arc(canvas.width/2, canvas.height/2, 220, degToRad(0), degToRad(smoothmin * 6 - 90));
     ctx.stroke();
     ctx.beginPath();
     ctx.strokeStyle = '#AFEEEE';
-    ctx.arc(250, 250, 225, degToRad(0), degToRad(smoothsec * 6 - 90));
+    ctx.arc(canvas.width/2, canvas.height/2, 225, degToRad(0), degToRad(smoothsec * 6 - 90));
     ctx.stroke();
     ctx.font = "25px Helvetica Bold";
     ctx.fillStyle = '#7FFFD4';
