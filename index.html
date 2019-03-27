@@ -2,79 +2,97 @@
 <html>
 
 <head>
-	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-	<title>___</title>
-	<style>
-		body{
-			width:100vw;
-			height:100vh;
-			overflow:hidden;
-			background:url(https://gss0.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/1b4c510fd9f9d72af2bf9269d22a2834359bbbef.jpg)
-		}
-		body div{
-			height:x;
-			width:800px;
-		}
-		div.content{
-			margin:auto;
-			width:500px;
-			position:absolute;
-			position: absolute;
-			left:50%;
-			top:50%;
-			margin-left:-250px;
-			margin-top:-250px;
-		}
-  	</style>
-	<link rel="stylesheet" href="style/css.css" />
-	<script>
-// 		return;
-// 		(function createScript() {
-// 			var _scriptS = [
-// 				'script/dojoInit.js',
-// 				'script/dojo-release-1.13.0/dojo/dojo.js',
-// 				'script/index.js'
-// 			];
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>___</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background: url(https://gss0.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/1b4c510fd9f9d72af2bf9269d22a2834359bbbef.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
-// 			var _href = location.href;
-// 			_href = _href.replace(/\/index.html/,'/');
-// 			var _head = document.head;
+        a {
+            text-decoration: none;
+            text-decoration: none;
+            color: white;
+            border: 1px solid;
+            border-bottom: none;
+            border-left: none;
+            margin-left: 30px;
+        }
 
-// 			for (var i = 0, len = _scriptS.length; i < len-1; i++) {
-// 				var item = _scriptS[i];
-// 				var _src = _href + item;
-// 				var tempNode = document.createElement('script');
-// 				tempNode.src = _src;
-// 				tempNode.type = 'text/javascript';
-// 				tempNode.charset = 'utf-8';
-// 				_head.appendChild(tempNode);
-// 			}
+        div.content {
+            margin: auto;
+            width: 500px;
+            position: absolute;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -250px;
+            margin-top: -250px;
+        }
 
-// 			setTimeout(function(){
-// 				var item = _scriptS[len-1];
-// 				var _src = _href + item;
-// 				var tempNode = document.createElement('script');
-// 				tempNode.src = _src
-// 				_head.appendChild(tempNode);
-// 			},1000)
-// 		})()
-	</script>
+        canvas {
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="style/css.css" /> -->
+    <!-- <script>
+		return;
+		(function createScript() {
+			var _scriptS = [
+				'script/dojoInit.js',
+				'script/dojo-release-1.13.0/dojo/dojo.js',
+				'script/index.js'
+			];
+
+			var _href = location.href;
+			_href = _href.replace(/\/index.html/,'/');
+			var _head = document.head;
+
+			for (var i = 0, len = _scriptS.length; i < len-1; i++) {
+				var item = _scriptS[i];
+				var _src = _href + item;
+				var tempNode = document.createElement('script');
+				tempNode.src = _src;
+				tempNode.type = 'text/javascript';
+				tempNode.charset = 'utf-8';
+				_head.appendChild(tempNode);
+			}
+
+			setTimeout(function(){
+				var item = _scriptS[len-1];
+				var _src = _href + item;
+				var tempNode = document.createElement('script');
+				tempNode.src = _src
+				_head.appendChild(tempNode);
+			},1000)
+		})()
+    </script> -->
 </head>
 
 <body>
-	<h1 id="greeting">H1</h1>
-	<div>
-		<nav id='nav'>
 
-		</nav>
-		<div id='content'>
-			<canvas id="canvas" width="500" height="500" />
-		</div>
+    <h1 id="greeting">
+        <a href="./next.html">下一个</a>
+    </h1>
 
-	</div>
-	<img src='' onerror='alert(/xss/)' style='display:none;' />
-	`
-	<script src="index.js"></script>
+    <div>
+        <nav id='nav'> </nav>
+
+        <div id='content'>
+            <canvas id="canvas" width="500" height="500" />
+        </div>
+    </div>
+
+    <img src='' onerror='console.log`"%c%s","color:red;font-size:60px;",/xss/`' style='display:none;' />
+    `
+    <script src="index.js"></script>
 </body>
 
 </html>
