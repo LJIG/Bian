@@ -1,39 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        *{margin:0;padding:0;}
-        div{width:50px;height:50px;border-radius:50%;position: absolute;
-            border-width:10px;border-style: solid;}
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url(https://gss0.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/1b4c510fd9f9d72af2bf9269d22a2834359bbbef.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        div {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            border-width: 10px;
+            border-style: solid;
+        }
     </style>
 </head>
+
 <body>
 </body>
 <script>
-    var divList=[];//创建一个空的集合，用来存储创建的div
-    for(i=0;i<70;i++){//循环次数50，创造50个div（环形）
-        var div=document.createElement("div");
-        var red=Math.round(Math.random()*255);
-        var green=Math.round(Math.random()*255);
-        var yellow=Math.round(Math.random()*255);//(产生随机数作为环形的颜色)
-        div.style.borderColor="rgb("+red+","+green+","+yellow+")";
+    var divList = [];//创建一个空的集合，用来存储创建的div
+    for (i = 0; i < 70; i++) {//循环次数50，创造50个div（环形）
+        var div = document.createElement("div");
+        var red = Math.round(Math.random() * 255);
+        var green = Math.round(Math.random() * 255);
+        var yellow = Math.round(Math.random() * 255);//(产生随机数作为环形的颜色)
+        div.style.borderColor = "rgb(" + red + "," + green + "," + yellow + ")";
+        // div.style.display = "none";
         document.body.appendChild(div);//在文档中产生环形
-        divList[divList.length]=div;//将产生的每一个环形放入空集合
+        divList[divList.length] = div;//将产生的每一个环形放入空集合
     }
-    document.onmousemove=function(e){//先鼠标按下获取相对位置
-        var evt=window.event || e;//IE兼容
-        var x=evt.clientX+(document.documentElement.scrollLeft||document.body.scrollLeft);//鼠标当前x位置
-        var y=evt.clientY+(document.documentElement.scrollTop||document.body.scrollTop);//鼠标当前y位置
+    document.onmousemove = function (e) {//先鼠标按下获取相对位置
+        var evt = window.event || e;//IE兼容
+        var x = evt.clientX + (document.documentElement.scrollLeft || document.body.scrollLeft);//鼠标当前x位置
+        var y = evt.clientY + (document.documentElement.scrollTop || document.body.scrollTop);//鼠标当前y位置
 
-        divList[0].style.left=x+"px";//第一个环形的x位置
-        divList[0].style.top=y+"px";//第一个环形的Y位置
+        divList[0].style.left = x + "px";//第一个环形的x位置
+        divList[0].style.top = y + "px";//第一个环形的Y位置
 
-            for(i=divList.length-1;i>0;i--){//循环让每一个环形都在它上一个的位置
-                divList[i].style.left=divList[i-1].offsetLeft+"px";
-                divList[i].style.top=divList[i-1].offsetTop+"px";
-            }
+        for (i = divList.length - 1; i > 0; i--) {//循环让每一个环形都在它上一个的位置
+            // div.style.display = "block";
+            divList[i].style.left = divList[i - 1].offsetLeft + "px";
+            divList[i].style.top = divList[i - 1].offsetTop + "px";
         }
+    }
 </script>
+
 </html>
