@@ -10,6 +10,7 @@ const domePages = [
   { url: `${domeBasePath}/next.html`, title: 'CSS文字效果' },
   { url: `${domeBasePath}/sliderOrigin.html`, title: '卡牌选牌' },
   { url: `${domeBasePath}/svgCircle.html`, title: '圆形滑块' },
+  { url: `${domeBasePath}/zhuiguangban.html`, title: '追光版' },
 ]
 
 
