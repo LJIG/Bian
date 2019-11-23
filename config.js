@@ -11,6 +11,7 @@ const domePages = [
   { url: `${domeBasePath}/sliderOrigin.html`, title: '卡牌选牌' },
   { url: `${domeBasePath}/svgCircle.html`, title: '圆形滑块' },
   { url: `${domeBasePath}/zhuiguangban.html`, title: '追光版' },
+  { url: `${domeBasePath}/dropDownMenus.html`, title: '下拉菜单' },
 ]
 
 
