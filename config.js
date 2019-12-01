@@ -3,7 +3,8 @@ const domeBasePath = './pages/dome'
 
 const canvasPages = [
   { url: `${canvasBasePath}/bg01.html`, title: '滚屏特效' },
-  { url: `${canvasBasePath}/fireworks.html`, title: '烟花特效' }
+  { url: `${canvasBasePath}/fireworks.html`, title: '烟花特效' },
+  { url: `${canvasBasePath}/rose.html`, title: '玫瑰花' }
 ]
 const domePages = [
   { url: `${domeBasePath}/mouseMove.html`, title: '鼠标圈圈' },
