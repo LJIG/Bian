@@ -8,6 +8,7 @@ const canvasPages = [
 ]
 const domePages = [
   { url: `${domeBasePath}/mouseMove.html`, title: '鼠标圈圈' },
+  { url: `${domeBasePath}/cssgrid.html`, title: '弹性布局' },
   { url: `${domeBasePath}/next.html`, title: 'CSS文字效果' },
   { url: `${domeBasePath}/sliderOrigin.html`, title: '卡牌选牌' },
   { url: `${domeBasePath}/svgCircle.html`, title: '圆形滑块' },
