@@ -14,6 +14,7 @@ const domePages = [
   { url: `${domeBasePath}/svgCircle.html`, title: '圆形滑块' },
   { url: `${domeBasePath}/zhuiguangban.html`, title: '追光版' },
   { url: `${domeBasePath}/dropDownMenus.html`, title: '下拉菜单' },
+  { url: `${domeBasePath}/hoverJump.html`, title: 'css加载动画' },
 ]
 
 

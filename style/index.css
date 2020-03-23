@@ -17,6 +17,8 @@
 
 #greeting{
   padding: 10px 0 0; 
+  line-height: 3rem;
+  height: 3rem;
 }
 
 #greeting a {
