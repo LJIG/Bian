@@ -16,6 +16,11 @@ const domePages = [
   { url: `${domeBasePath}/zhuiguangban.html`, title: '追光版' },
   { url: `${domeBasePath}/dropDownMenus.html`, title: '下拉菜单' },
   { url: `${domeBasePath}/hoverJump.html`, title: 'css加载动画' },
+  { url: `${domeBasePath}/eagle.html`, title: '鹰' },
+  { url: `${domeBasePath}/macOsDock.html`, title: '苹果程序邬效果' },
+  { url: `${domeBasePath}/a.html`, title: '超级玛丽' },
+  { url: `${domeBasePath}/jiqimao.html`, title: '机器猫' },
+  { url: `${domeBasePath}/card.html`, title: '拖动' },
 ]
 
 
