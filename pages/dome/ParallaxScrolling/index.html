@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            height: 100vh;
+            text-align: center;
+            font-size: 60px;
+            color: pink;
+        }
+
+        .g-img {
+            /* background-image: url(...); */
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .g-img.i1 {
+            background-image: url(./img/1.jpg)
+        }
+
+        .g-img.i2 {
+            background-image: url(./img/2.jpg)
+        }
+
+        .g-img.i3 {
+            background-image: url(./img/3.jpg)
+        }
+    </style>
+</head>
+
+<body>
+    <section class="g-word">Header</section>
+    <section class="g-img i1">IMG1</section>
+    <section class="g-word">Content1</section>
+    <section class="g-img i2">IMG2</section>
+    <section class="g-word">Content2</section>
+    <section class="g-img i3">IMG3</section>
+    <section class="g-word">Footer</section>
+</body>
+
+</html>

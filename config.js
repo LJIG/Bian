@@ -21,6 +21,14 @@ const domePages = [
   { url: `${domeBasePath}/a.html`, title: '超级玛丽' },
   { url: `${domeBasePath}/jiqimao.html`, title: '机器猫' },
   { url: `${domeBasePath}/card.html`, title: '拖动' },
+  {url: `${domeBasePath}/borderStyle.html`,title: '边框样式'},
+  {url: `${domeBasePath}/vueAuto.html`,title: '边框样式'},
+  {url: `${domeBasePath}/vueAuto.html`,title: 'vue动画 跟进列表'},
+  {url: `${domeBasePath}/vueAuto1.html`,title: 'vue动画 段落列表'},
+  {url: `${domeBasePath}/vueAuto2.html`,title: 'vue动画 交错列表'},
+  {url: `${domeBasePath}/vueAuto3.html`,title: 'vue动画 翻转列表'},
+  {url: `${domeBasePath}/wechatBomb.html`,title: '微信爆炸动画'},
+  {url: `${domeBasePath}/ParallaxScrolling/index.html`, title:'全屏滚动'}
 ]
 
 

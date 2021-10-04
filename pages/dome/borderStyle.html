@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>borderStyle</title>
+  <style>
+    .dome1,.dome2,.dome3,.dome4,.dome5,
+    .dome6,.dome7,.dome8,.dome9,.dome10{
+      width: 300px;
+      height: 300px;
+      display: inline-block;
+      margin-bottom: 15px;
+      margin-left: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="dome1">
+    <div class="gradient"></div>
+    <div class="outline"></div>
+    <style>
+      .dome1 {
+        /* width: 100%;
+        height: 100%; */
+        display: flex;
+      }
+
+      .dome1 div {
+          position: relative;
+          width: 140px;
+          height: 64px;
+          margin: auto;
+      }
+
+      .dome1 .gradient {
+          background: 
+              linear-gradient(90deg, #333 50%, transparent 0) repeat-x,
+              linear-gradient(90deg, #333 50%, transparent 0) repeat-x,
+              linear-gradient(0deg, #333 50%, transparent 0) repeat-y,
+              linear-gradient(0deg, #333 50%, transparent 0) repeat-y;
+          background-size: 4px 1px, 4px 1px, 1px 4px, 1px 4px;
+          background-position: 0 0, 0 100%, 0 0, 100% 0;
+          cursor: pointer;
+          
+      }
+      .dome1 .gradient:hover {
+          animation: linearGradientMove .3s infinite linear;
+      }
+
+      .dome1 .outline {
+          /* // border: 1px solid #333; */
+          outline: 1px solid #333;
+          outline-offset: -1px;
+          transition: all .3s linear;
+          cursor: pointer;
+          
+      }
+      .dome1 .outline:hover {
+          /* // border: 1px solid transparent; */
+          outline: 1px solid transparent;
+          background: 
+              linear-gradient(90deg, #333 50%, transparent 0) repeat-x,
+              linear-gradient(90deg, #333 50%, transparent 0) repeat-x,
+              linear-gradient(0deg, #333 50%, transparent 0) repeat-y,
+              linear-gradient(0deg, #333 50%, transparent 0) repeat-y;
+          background-size: 4px 1px, 4px 1px, 1px 4px, 1px 4px;
+          background-position: 0 0, 0 100%, 0 0, 100% 0;
+          animation: linearGradientMove .3s infinite linear;
+      }
+
+      @keyframes linearGradientMove {
+          100% {
+              background-position: 4px 0, -4px 100%, 0 -4px, 100% 4px;
+          }
+      } 
+    </style>
+  </div>
+
+  <div class="dome2">
+    <div class="rainbow"></div>
+    <style>
+      .dome2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* height: 100vh; */
+      }
+
+      .dome2 *, .dome2 *::before, .dome2 *::after {
+        box-sizing: border-box;
+      }
+
+      @keyframes rotate {
+        100% {
+          transform: rotate(1turn);
+        }
+      }
+
+      .dome2 .rainbow {
+        position: relative;
+        z-index: 0;
+        width: 400px;
+        height: 300px;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 2rem;
+        
+      }
+      .dome2 .rainbow::before {
+        content: '';
+        position: absolute;
+        z-index: -2;
+        left: -50%;
+        top: -50%;
+        width: 200%;
+        height: 200%;
+        background-color: #399953;
+        background-repeat: no-repeat;
+        background-size: 50% 50%, 50% 50%;
+        background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+        background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
+        animation: rotate 4s linear infinite;
+      }
+      
+      .dome2 .rainbow::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 6px;
+        top: 6px;
+        width: calc(100% - 12px);
+        height: calc(100% - 12px);
+        background: white;
+        border-radius: 5px;
+        animation: opacityChange 3s infinite alternate;
+      }
+
+      @keyframes opacityChange {
+        50% {
+          opacity:1;
+        }
+        100% {
+          opacity: .5;
+        }
+      }
+    </style>
+  </div>
+
+  <div class="dome3">
+    <div></div>
+    <style>
+      .dome3 {
+        display: flex;
+        /* justify-content: center;
+        align-items: center;
+        height: 100vh; */
+      }
+
+      .dome3 *,.dome3 *::before,.dome3 *::after {
+        box-sizing: border-box;
+      }
+
+      @keyframes rotate {
+        100% {
+          transform: rotate(1turn);
+        }
+      }
+
+      .dome3 div {
+        position: relative;
+        z-index: 0;
+        width: 400px;
+        height: 300px;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 2rem;
+        
+      }
+      .dome3 div::before {
+        content: '';
+        position: absolute;
+        z-index: -2;
+        left: -50%;
+        top: -50%;
+        width: 200%;
+        height: 200%;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-size: 50% 50%;
+        background-position: 0 0;
+        background-image: conic-gradient(#399953, #399953);
+        animation: rotate 4s linear infinite;
+      }
+      
+      .dome3 div::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 6px;
+        top: 6px;
+        width: calc(100% - 12px);
+        height: calc(100% - 12px);
+        background: white;
+        border-radius: 5px;
+        animation: opacityChange 3s infinite alternate;
+      }
+
+      @keyframes opacityChange {
+        50% {
+          opacity:1;
+        }
+        100% {
+          opacity: .5;
+        }
+      }
+    </style>
+  </div>
+
+  <div class="dome4">
+    <div class="conic"></div>
+    <div class="conic conic-demo"></div>
+    <style>
+      .dome4 {
+        display: flex;
+        /* justify-content: center;
+        align-items: center;
+        height: 100vh; */
+        width: 800px;
+        height: 340px;
+        background: #000;
+      }
+
+      .dome4 *,.dome4 *::before,.dome4 *::after {
+        box-sizing: border-box;
+      }
+
+      @keyframes rotate {
+        100% {
+          transform: rotate(1turn);
+        }
+      }
+
+      .dome4 .conic {
+        position: relative;
+        z-index: 0;
+        width: 400px;
+        height: 300px;
+        margin: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 2rem;
+        
+      }
+      .dome4 .conic::before {
+        content: '';
+        position: absolute;
+        z-index: -2;
+        left: -50%;
+        top: -50%;
+        width: 200%;
+        height: 200%;
+        background-color: #1a232a;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-image: conic-gradient(transparent, rgba(168, 239, 255, 1), transparent 30%);
+        animation: rotate 4s linear infinite;
+      }
+      
+      .dome4 .conic::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 6px;
+        top: 6px;
+        width: calc(100% - 12px);
+        height: calc(100% - 12px);
+        background: #000;
+        border-radius: 5px;
+      }
+
+      .conic.conic-demo::after {
+        animation: opacityChange 5s infinite linear;
+      }
+
+      @keyframes opacityChange {
+        50% {
+          opacity:.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </div>
+
+  <div class="dome5">
+    <div>Hello</div>
+    <div class="bg">示意图</div>
+    <style>
+      .dome5 {
+          /* width: 100%;
+          height: 100%; */
+          width: 500px;
+          display: flex;
+      }
+
+      .dome5 div {
+          position: relative;
+          margin: auto;
+          width: 160px;
+          line-height: 160px;
+          text-align: center;
+          font-size: 24px;
+          
+      }
+      .dome5 div::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border: 2px solid gold;
+          transition: all .5s;
+          animation: clippath 3s infinite linear;
+      }
+
+      @keyframes clippath {
+          0%,
+          100% {
+              clip-path: inset(0 0 95% 0);
+          }
+          
+          25% {
+              clip-path: inset(0 95% 0 0);
+          }
+          50% {
+              clip-path: inset(95% 0 0 0);
+          }
+          75% {
+              clip-path: inset(0 0 0 95%);
+          }
+      }
+
+      .bg::before {
+          background: rgba(255, 215, 0, .5);
+      }
+    </style>
+  </div>
+
+  <div class="dome6">
+    <div>Hello</div>
+    <style>
+      .dome6 {
+          /* width: 100%;
+          height: 100%; */
+          display: flex;
+      }
+
+      .dome6 div {
+          position: relative;
+          margin: auto;
+          width: 120px;
+          line-height: 64px;
+          text-align: center;
+          color: #fff;
+          font-size: 20px;
+          border: 2px solid gold;
+          border-radius: 10px;
+          background: gold;
+          transition: all .3s;
+          cursor: pointer;
+          
+      }
+      .dome6 div:hover {
+          filter: contrast(1.1);
+      }
+      
+      .dome6 div:active {
+          filter: contrast(0.9);
+      }
+      
+      .dome6 div::before,
+      .dome6 div::after {
+          content: "";
+          position: absolute;
+          top: -10px;
+          left: -10px;
+          right: -10px;
+          bottom: -10px;
+          border: 2px solid gold;
+          transition: all .5s;
+          animation: clippath 3s infinite linear;
+          border-radius: 10px;
+      }
+      
+      .dome6 div::after {
+          animation: clippath 3s infinite -1.5s linear;
+      }
+
+      @keyframes clippath {
+          0%,
+          100% {
+              clip-path: inset(0 0 98% 0);
+          }
+          
+          25% {
+              clip-path: inset(0 98% 0 0);
+          }
+          50% {
+              clip-path: inset(98% 0 0 0);
+          }
+          75% {
+              clip-path: inset(0 0 0 98%);
+          }
+      }
+
+      .bg::before {
+          background: rgba(255, 215, 0, .5);
+      }
+    </style>
+  </div>
+
+  <div class="dome7">
+    <div>Hover Me</div>
+    <div>Hover Me</div>
+    <style>
+      .dome7 {
+          width: 800px;
+          height: 400px;
+          display: flex;
+          background: yellowgreen;
+      }
+
+      .dome7 div {
+          position: relative;
+          margin: auto;
+          width: 200px;
+          height: 100px;
+          line-height: 100px;
+          text-align: center;
+          overflow: hidden;
+          
+      }
+        .dome7 div::after {
+            content: "Hover Me";
+            position: absolute;
+            top: 4px;
+            bottom: 4px;
+            right: 4px;
+            left: 4px;
+            line-height: 92px;
+            font-size: 24px;
+            background: #fff;
+            /* // border-radius: 50%; */
+            border: 2px solid yellowgreen;
+            cursor: pointer;
+            color: yellowgreen;
+        }
+        
+        .dome7 div::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            right: -20px;
+            left: 0px;
+            background: #fff;
+            /* //border-radius: 50%; */
+            transform: rotateZ(-90deg) translate(-100%, -100%);
+            transform-origin: top left;
+            transition: transform .3s;
+            transition-timing-function: linear;
+        }
+        
+        .dome7 div:hover {
+            filter: contrast(1.2);
+        }
+        
+        .dome7 div:hover::before {
+                transform: rotateZ(0deg) translate(0%, -0%);
+            }
+
+            .dome7 div:nth-child(2) {
+          overflow: unset;
+          
+      }
+      .dome7 div:nth-child(2)::after {
+          content: "";
+      }
+
+      .dome7 div:nth-child(1):hover ~.dome7 div:nth-child(2)::before {
+          transform: rotateZ(0deg) translate(0%, -0%);
+      }
+          
+    </style>
+  </div>
+
+  <div class="dome8">
+    <div class="heart"></div>
+    <!-- <div class="star"></div> -->
+    <style>
+      :root {
+          --url: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/652/hearts-border-image.png');
+      }
+
+      .dome8 {
+          /* width: 100%;
+          height: 100%; */
+          display: flex;
+      }
+
+      .dome8 div {
+            position: relative;
+          width: 200px;
+          height: 120px;
+          margin: auto; 
+      }
+
+      .dome8 .heart {
+          border: 21px solid;
+          border-image: var(--url) 21 round;
+      }
+
+      .dome8 .star {
+          border: 20px solid;
+          border-image: var(--star);
+          border-image-repeat: repeat;
+          border-image-slice: 30%;  
+          /* // border-image-width: 20px;   */
+      }
+    </style>
+  </div>
+
+  <div class="dome9">
+    <div class="skulls"></div>
+    <style>
+      .dome9 {
+        /* width: 100%;
+        height: 100%; */
+        width: 360px;
+        display: flex;
+      }
+
+      .dome9 .skulls {
+        position: relative;
+        width: 600px;
+        height: 200px;
+        margin: auto;
+        border: 24px solid;
+        border-image: url(../../image/skull-border.svg);
+        border-image-slice: 32;
+        border-image-repeat: round;
+      }
+
+    </style>
+  </div>
+
+  <div class="dome10">
+    <div class="border-image-clip-path"></div>
+    <style>
+      .dome10 {
+          /* width: 100%;
+          min-height: 100%; */
+          display: flex;
+      }
+
+      .dome10 .border-image-clip-path {
+          width: 200px;
+          height: 100px;
+          margin: auto;
+          border: 10px solid;
+          border-image: linear-gradient(45deg, gold, deeppink) 1;
+          clip-path: inset(0px round 10px);
+          animation: huerotate 6s infinite linear;
+          filter: hue-rotate(360deg);
+      }
+
+      @keyframes huerotate {
+          0% {
+              filter: hue-rotate(0deg);
+          }
+          100% {
+              filter: hue-rorate(360deg);
+          }
+      }
+
+    </style>
+  </div>
+</body>
+</html>
