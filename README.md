@@ -1,4 +1,4 @@
-# bian_ts
+# ts
 
 ## Project setup
 ```
